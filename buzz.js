@@ -1,18 +1,28 @@
-function buzz() {
- for(i=1; i < 101; i++) {
-  if(i % 15 === 0) 
-   console.log("it is divisable by both 3 and 5");
+//variable that will hold the total number of fizz, buzz, and fizzbuzz
+var fizz = 0;
 
-  else if(i % 5 === 0) 
-   console.log("its divisable by 5");
+function buzz() {
+ 
+ var x = document.getElementById('fizzNumber').value;
+
+ for(i=1; i < x; i++) {
   
-  else if(i % 3 === 0) 
-   console.log("it is divisable by 3");
-  
+  if(i % 15 === 0) {
+   document.getElementById('fuzzy').innerHTML += "FizzBuzz";
+   fizz++;
+  }
+
+  else if(i % 5 === 0) {
+   document.getElementById('fuzzy').innerHTML += "Buzz";
+   fizz++; 
+  }
+  else if(i % 3 === 0) {
+   document.getElementById('fuzzy').innerHTML += "Fizz";
+   fizz++;
+  }
+   
   else 
-   console.log(i);
+   document.getElementById('fuzzy').innerHTML += i;
   
  }
 }
-
-buzz();
